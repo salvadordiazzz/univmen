@@ -1,0 +1,42 @@
+.toolbar{
+  padding:1.5em;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.toolbar-tittle {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+a{
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  margin-right: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .toolbar{
+    padding:1em;
+  }
+
+  .toolbar-tittle {
+    font-size: 1.2em;
+  }
+
+  a{
+    font-size: 0.7em;
+  }
+
+  li{
+    margin-right: 0.5em;
+  }
+}

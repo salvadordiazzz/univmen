@@ -1,0 +1,10 @@
+.anuncio{
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.anuncio h2{
+  font-weight: bold;
+}

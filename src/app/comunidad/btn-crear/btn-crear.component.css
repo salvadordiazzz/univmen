@@ -1,0 +1,47 @@
+.mat-custom-color{
+  background-color: #723724D1;
+  color:white;
+  font-weight: bold;
+  width: 15%;
+  font-size: larger;
+  position: fixed;
+  bottom: -10px;
+  left: 20px;
+  z-index: 100;
+  transition-property: bottom;
+  transition-duration: 0.2s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+.mat-custom-send{
+  background-color: #723724D1;
+  color:white;
+  width: 40%;
+}
+.mat-custom-send[disabled]{
+  background-color:#636363!important;
+  color:white;
+  width: 40%;
+}
+.dialog-container{
+  width: 500px
+}
+
+.form {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.inputs {
+  width: 80%;
+  margin: 10px 0;
+}
+
+.mat-custom-color:hover{
+  bottom:0;
+  transform: scale(1.1);
+}

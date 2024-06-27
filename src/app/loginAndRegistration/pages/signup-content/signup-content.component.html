@@ -1,0 +1,40 @@
+<mat-card>
+  <form [formGroup]="loginForm" class="form" (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+    <p>
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          formControlName="email"
+          (blur)="updateErrorMessage()"
+          required
+        />
+        <mat-error *ngIf="email.invalid">{{errorMessage}}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" formControlName="pass" placeholder="password" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-radio-group aria-label="Select an option" formControlName="type">
+        <mat-radio-button value=1>Type 1</mat-radio-button>
+        <mat-radio-button value=2>Type 2</mat-radio-button>
+      </mat-radio-group>
+    </p>
+    <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+  </form>
+</mat-card>

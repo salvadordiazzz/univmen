@@ -1,0 +1,11 @@
+.titulo {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 1em;
+  color: #723724D1;
+}
+.divider {
+  margin: auto auto 3em;
+  width: 90%;
+}

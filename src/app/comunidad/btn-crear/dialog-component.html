@@ -1,0 +1,29 @@
+<div class="dialog-container">
+  <h2 style="color:#723724D1; font-family: Nunito,sans-serif;" mat-dialog-title>Escribe una publicación</h2>
+
+  <form [formGroup]="publishForm" class="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="inputs">
+      <mat-label>Titulo</mat-label>
+      <input matInput placeholder="Agrega un titulo emocionante"
+             formControlName="title"
+             (blur)="titleErrorMessage()"
+             required>
+      <mat-error class="error" *ngIf="title.invalid">{{errorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="inputs">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput placeholder="Describe tu publicación"
+                formControlName="content"
+                (blur)="contentErrorMessage()"
+                required></textarea>
+      <mat-error class="error" *ngIf="content.invalid">{{errorMessage2}}</mat-error>
+    </mat-form-field>
+    <button mat-flat-button class="enviar" type="submit" [disabled]="publishForm.invalid" color="custom-send">Publicar</button>
+  </form>
+
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</div>
+

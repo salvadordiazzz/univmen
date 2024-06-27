@@ -1,0 +1,24 @@
+<mat-toolbar style="background-color: rgba(114,55,36,0.82);" class="toolbar">
+  <span class="toolbar-tittle">Universidad Menor</span>
+  <ul>
+    <li>
+      <a routerLink="home" routerLinkActive="active">Home</a>
+    </li>
+    <li *ngIf="this.isAuthenticated">
+      <a routerLink="community" routerLinkActive="active">Comunidad</a>
+    </li>
+    <li *ngIf="!this.isAuthenticated">
+      <a routerLink="notauth" routerLinkActive="active">Comunidad</a>
+    </li>
+    <li *ngIf="!this.isAuthenticated">
+      <a routerLink="login" routerLinkActive="active">Login</a>
+    </li>
+    <li *ngIf="!this.isAuthenticated">
+      <a routerLink="signup" routerLinkActive="active">Sign Up</a>
+    </li>
+    <li *ngIf="this.isAuthenticated">
+      <a (click)="logout()">Sign Out</a>
+    </li>
+  </ul>
+</mat-toolbar>
+<router-outlet/>

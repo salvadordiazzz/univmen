@@ -1,0 +1,19 @@
+div{
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url('/assets/images/universidad-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 100%;
+}
+span{
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  color: rgba(114,55,36,0.82);
+}
